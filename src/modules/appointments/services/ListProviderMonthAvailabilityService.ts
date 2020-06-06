@@ -49,7 +49,7 @@ class ListProviderMonthAvailabilityService {
       return {
         day,
         available:
-          isAfter(new Date(), compareDate) && appointmentInDay.length < 10,
+          isAfter(compareDate, new Date()) && appointmentInDay.length < 10,
       };
     });
 
