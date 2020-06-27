@@ -29,6 +29,7 @@ export default {
   uploadsFolder: path.resolve(tmpFolder, 'uploads'),
 
   multer: {
+    limits: { fieldSize: 25 * 1024 * 1024 },
     storage: multer.diskStorage({
       destination: path.resolve(__dirname, '..', '..', 'tmp'),
       filename(request, file, callback) {
